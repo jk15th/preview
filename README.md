@@ -1,4 +1,6 @@
 # preview
+<!-- vue create preview -->
+vue create preview
 
 ## Project setup
 ```
