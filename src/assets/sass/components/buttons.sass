@@ -1,0 +1,30 @@
+.btn
+    text-align: center
+    padding: $spacing*.5 $spacing*2
+    line-height: 1.5
+    border: 1px solid transparent
+    transition: .325s
+    &-block
+        display: block
+        width: 100%
+    &-red
+        background: $red
+        color: $white
+        &:hover
+            border-color: $red
+            background: $white
+            color: $red
+    &-red-outline
+        background: $white
+        color: $red
+        border-color: $red
+
+        &:hover
+            border-color: transparent
+            background: $red
+            color: $white
+    &-border
+        &-1
+            border-radius: 1px
+        &-4
+            border-radius: 4px

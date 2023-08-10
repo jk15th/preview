@@ -1,0 +1,36 @@
+
+.wrapper
+  margin: 0 auto
+  max-width: $max-container
+
+.width-fit-content
+  width: fit-content
+.height
+  &-sm
+    display: flex
+    padding: 0 $spacing
+    justify-content: center
+    align-items: center
+    min-height: 32px
+  &-md
+    display: flex
+    padding: 0 $spacing
+    justify-content: center
+    align-items: center
+    min-height: 38px
+  &-lg
+    display: flex
+    padding: 0 $spacing
+    justify-content: center
+    align-items: center
+    min-height: 46px
+
+
+$position: top, right, bottom, left
+$colors:  (white: $white, black: $black, red: $red, black-blue: $black-blue, gray: $gray )
+
+@each $p in $position 
+  @each $var, $color in $colors
+    .devide-#{$p}-#{$var}
+      border-#{$p}: 1px solid #000 
+      border-color: $color

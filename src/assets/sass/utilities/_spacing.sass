@@ -1,0 +1,29 @@
+$align-items: ('start': flex-start, 'center': center, 'end': flex-end)
+@each $name, $position in $align-items
+    .align-items-#{$name}
+        align-items: $position
+
+$display: flex, inline-flex, block, inline-block
+@each $var in $display
+    .d-#{$var}
+        display: $var
+
+$justify-content: center, start, end, flex-start, flex-end, space-between
+@each $var in $justify-content
+    .justify-content-#{$var}
+        justify-content: $var
+
+$position: top, right, bottom, left
+
+@for $var from 0 through 5
+    .m-#{$var}
+        margin: $spacing*$var
+    .p-#{$var}
+        padding: $spacing*$var
+    .m-#{$var}-auto
+        margin: $var auto
+    @each $p in $position
+        .m#{str-slice($p, 0, 1)}-#{$var}
+            margin-#{$p}: $spacing*$var
+        .p#{str-slice($p, 0, 1)}-#{$var}
+            padding-#{$p}: $spacing*$var

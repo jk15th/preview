@@ -1,0 +1,16 @@
+$colors: (white: $white, black: $black, red: $red, black-blue: $black-blue, gray: $gray )
+@each $var, $color in $colors
+  .text-#{$var}
+    color: $color
+  .bg-#{$var}
+    background: $color
+
+$sizies: ('12': .75rem,'14': .875rem,'16': 1rem,'18': 1.125rem,'20': 1.25rem,'22': 1.375rem,'24': 1.5rem)
+@each $var, $size in $sizies
+  .font-size-#{$var}
+    font-size: $size
+
+$weight: bold,normal 
+@each $w in $weight
+  .font-#{$w}
+    font-weight: $w
